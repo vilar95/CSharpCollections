@@ -37,6 +37,40 @@ namespace CSharpCollections
 
             aulas[0] = "Trabalhando com Arrays";
             Imprimir(aulas);
+
+            Console.WriteLine("Aula modelando está no índice " + Array.IndexOf(aulas, aulaModelando));
+            Console.WriteLine(Array.LastIndexOf(aulas, aulaModelando));
+
+            Array.Reverse(aulas);
+            Imprimir(aulas);
+
+            Array.Reverse(aulas);
+            Imprimir(aulas);
+
+            Array.Resize(ref aulas, 2);
+            Imprimir(aulas);
+
+            Array.Resize(ref aulas, 3);
+            Imprimir(aulas);
+
+            aulas[2] = "Conclusão";
+
+            aulas[aulas.Length - 1] = "Conclusão";
+            Imprimir(aulas);
+            
+            Array.Sort(aulas);
+            Imprimir(aulas);
+
+            string[] copia = new string[2];
+            Array.Copy(aulas, 1, copia, 0, 2);
+            Imprimir(copia);
+
+            string[] clone = aulas.Clone() as string[];
+            Imprimir(copia);
+
+            Array.Clear(clone, 1, 2);
+            Imprimir(clone);
+
         }
 
         private static void Imprimir(string[] aulas)
